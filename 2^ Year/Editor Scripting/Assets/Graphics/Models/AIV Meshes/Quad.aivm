@@ -1,0 +1,9 @@
+# AIV Mesh FORMAT
+# Two lines of comma separated integer values
+# The first line defines vertices coordinates, in groups of 3 in the format x,y,z,x,y,z,x,y,z...
+# The second line defines the triangles, in groups of 3 vertex indices
+
+# Vertices coordinates
+-1,-1,0,1,-1,0,1,1,0,-1,1,0
+# Trianges IDs
+0,1,2,0,2,3
