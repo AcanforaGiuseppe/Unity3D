@@ -1,0 +1,3 @@
+ok=ok
+cancel=annullaperchènonhovoglia
+#CTRL_PlayerForward=Muovi in avanti
