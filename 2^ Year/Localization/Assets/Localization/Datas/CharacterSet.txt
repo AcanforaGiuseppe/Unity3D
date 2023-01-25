@@ -1,0 +1,6 @@
+﻿ok=ok
+cancel=cancel
+#CTRL_PlayerForward=Move Forward
+ok=行
+cancel=刪除
+#CTRL_PlayerForward=前進
