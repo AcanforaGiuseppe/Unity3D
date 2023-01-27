@@ -7,11 +7,14 @@ public class RenderImage : MonoBehaviour
 {
     void Start()
     {
-        StartCoroutine(MyCoroutine("https://ih1.redbubble.net/image.1071266540.8760/flat,750x1000,075,f.u1.jpg"));
-        StartCoroutine(MyCoroutine("https://upload.wikimedia.org/wikipedia/en/7/71/Monster_Hunter_logo.png"));
+        StartCoroutine(MyCoroutineImage("https://ih1.redbubble.net/image.1071266540.8760/flat,750x1000,075,f.u1.jpg"));
+        StartCoroutine(MyCoroutineImage("https://upload.wikimedia.org/wikipedia/en/7/71/Monster_Hunter_logo.png"));
+        StartCoroutine(MyCoroutineSound("https://freetestdata.com/wp-content/uploads/2021/09/Free_Test_Data_100KB_OGG.ogg"));
+        StartCoroutine(MyCoroutineText("http://httpbin.org/headers"));
+
     }
 
-    IEnumerator MyCoroutine(string URL)
+    IEnumerator MyCoroutineImage(string URL)
     {
         UnityWebRequest www = UnityWebRequestTexture.GetTexture(URL);
 
