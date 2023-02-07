@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638095428065958441
-    m_Hash: 228985270
+      ticks: 638113597028746245
+    m_Hash: 680267894
   m_LockFileStatus:
     m_FilePath: Z:/Development/- Projects/Unity/3^ Year/Multiplayer/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638095428171810834
-    m_Hash: 1587512919
+      ticks: 638113597028816311
+    m_Hash: 4033419859
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -102,6 +102,7 @@ m_PackageAssets:
         - 2.0.0-preview.20
         - 2.0.0-preview.21
         - 2.0.0-preview.22
+        - 2.0.0
         - 2.1.0-preview.3
         - 2.1.0-preview.5
         - 2.1.0-preview.6
@@ -124,6 +125,7 @@ m_PackageAssets:
         - 2.0.0-preview.20
         - 2.0.0-preview.21
         - 2.0.0-preview.22
+        - 2.0.0
         - 2.1.0-preview.3
         - 2.1.0-preview.5
         - 2.1.0-preview.6
@@ -464,6 +466,229 @@ m_PackageAssets:
         type: git
         url: git+https://github.com/Unity-Technologies/com.unity.ide.vscode.git
         revision: 1f4f605d5c988cb610c372b5c5216c46cc8f5d30
+        path: 
+    - packageId: com.unity.quicksearch@2.0.2
+      testable: 0
+      isDirectDependency: 1
+      version: 2.0.2
+      source: 1
+      resolvedPath: Z:\Development\- Projects\Unity\3^ Year\Multiplayer\Library\PackageCache\com.unity.quicksearch@2.0.2
+      assetPath: Packages/com.unity.quicksearch
+      name: com.unity.quicksearch
+      displayName: Quick Search
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: tool
+      description: 'Search multiple areas of Unity: assets, scene objects, menu items,
+        packages, APIs, settings, etc.
+
+
+        On Windows simply press Alt+'' to
+        find anything or Option+'' on Mac.
+
+        Look in the shortcut manager
+        for additional Quick Search shortcut bindings.'
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.9.5-preview.1
+        - 0.9.6-preview.1
+        - 0.9.7-preview.3
+        - 0.9.9-preview.2
+        - 0.9.95-preview
+        - 1.0.0-preview.2
+        - 1.0.1-preview.1
+        - 1.0.9-preview.2
+        - 1.1.0-preview.1
+        - 1.2.0-preview.1
+        - 1.2.1-preview
+        - 1.2.2-preview
+        - 1.2.3-preview
+        - 1.2.4-preview
+        - 1.2.6-preview
+        - 1.2.7-preview
+        - 1.2.8-preview
+        - 1.2.9-preview
+        - 1.3.0-preview
+        - 1.3.1-preview
+        - 1.3.2-preview
+        - 1.4.1
+        - 1.4.2-preview.1
+        - 1.4.2-preview.2
+        - 1.4.2-preview.3
+        - 1.5.0-preview.1
+        - 1.5.0-preview.2
+        - 1.5.0-preview.3
+        - 1.5.0-preview.4
+        - 1.5.0-preview.5
+        - 1.5.0-preview.6
+        - 1.5.0
+        - 1.5.1
+        - 1.5.2-preview.1
+        - 1.5.2-preview.2
+        - 1.5.2
+        - 1.5.3
+        - 1.5.4
+        - 1.6.0-preview.1
+        - 1.6.0-preview.2
+        - 1.6.0-preview.3
+        - 1.6.0-preview.4
+        - 1.6.0-preview.5
+        - 1.6.0-preview.6
+        - 1.6.0-preview.7
+        - 1.6.0-preview.8
+        - 1.6.0-preview.9
+        - 2.0.0
+        - 2.0.2
+        - 2.1.0-preview.1
+        - 2.1.0-preview.2
+        - 2.1.0-preview.3
+        - 2.1.0-preview.4
+        - 2.1.0-preview.5
+        - 3.0.0-preview.1
+        - 3.0.0-preview.2
+        - 3.0.0-preview.3
+        - 3.0.0-preview.5
+        - 3.0.0-preview.6
+        - 3.0.0-preview.7
+        - 3.0.0-preview.8
+        - 3.0.0-preview.9
+        - 3.0.0-preview.10
+        - 3.0.0-preview.11
+        - 3.0.0-preview.12
+        - 3.0.0-preview.13
+        - 3.0.0-preview.14
+        - 3.0.0-preview.15
+        - 3.0.0-preview.16
+        - 3.0.0-preview.17
+        - 3.0.0-preview.18
+        - 3.0.0-preview.19
+        - 3.0.0-preview.20
+        - 3.0.0-preview.21
+        - 3.0.0-preview.22
+        - 3.0.0-preview.23
+        - 3.0.0-preview.24
+        - 3.0.0-preview.25
+        - 3.0.0-preview.26
+        compatible:
+        - 0.9.5-preview.1
+        - 0.9.6-preview.1
+        - 0.9.7-preview.3
+        - 0.9.9-preview.2
+        - 0.9.95-preview
+        - 1.0.0-preview.2
+        - 1.0.1-preview.1
+        - 1.0.9-preview.2
+        - 1.1.0-preview.1
+        - 1.2.0-preview.1
+        - 1.2.1-preview
+        - 1.2.2-preview
+        - 1.2.3-preview
+        - 1.2.4-preview
+        - 1.2.6-preview
+        - 1.2.7-preview
+        - 1.2.8-preview
+        - 1.2.9-preview
+        - 1.3.0-preview
+        - 1.3.1-preview
+        - 1.3.2-preview
+        - 1.4.1
+        - 1.4.2-preview.1
+        - 1.4.2-preview.2
+        - 1.4.2-preview.3
+        - 1.5.0-preview.1
+        - 1.5.0-preview.2
+        - 1.5.0-preview.3
+        - 1.5.0-preview.4
+        - 1.5.0-preview.5
+        - 1.5.0-preview.6
+        - 1.5.0
+        - 1.5.1
+        - 1.5.2-preview.1
+        - 1.5.2-preview.2
+        - 1.5.2
+        - 1.5.3
+        - 1.5.4
+        - 1.6.0-preview.1
+        - 1.6.0-preview.2
+        - 1.6.0-preview.3
+        - 1.6.0-preview.4
+        - 1.6.0-preview.5
+        - 1.6.0-preview.6
+        - 1.6.0-preview.7
+        - 1.6.0-preview.8
+        - 1.6.0-preview.9
+        - 2.0.0
+        - 2.0.2
+        - 2.1.0-preview.1
+        - 2.1.0-preview.2
+        - 2.1.0-preview.3
+        - 2.1.0-preview.4
+        - 2.1.0-preview.5
+        - 3.0.0-preview.1
+        - 3.0.0-preview.2
+        - 3.0.0-preview.3
+        - 3.0.0-preview.5
+        - 3.0.0-preview.6
+        - 3.0.0-preview.7
+        - 3.0.0-preview.8
+        - 3.0.0-preview.9
+        - 3.0.0-preview.10
+        - 3.0.0-preview.11
+        - 3.0.0-preview.12
+        - 3.0.0-preview.13
+        - 3.0.0-preview.14
+        - 3.0.0-preview.15
+        - 3.0.0-preview.16
+        - 3.0.0-preview.17
+        - 3.0.0-preview.18
+        - 3.0.0-preview.19
+        - 3.0.0-preview.20
+        - 3.0.0-preview.21
+        - 3.0.0-preview.22
+        - 3.0.0-preview.23
+        - 3.0.0-preview.24
+        - 3.0.0-preview.25
+        - 3.0.0-preview.26
+        verified: 2.0.2
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - unity
+      - editor
+      - omni
+      - tool
+      - quick
+      - search
+      - assets
+      - menu
+      - scene
+      - api
+      - packages
+      - anything
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637293829350000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.quicksearch.git
+        revision: 4d5c0f54be26662a75c6c9d71d0f5354d4379fe8
         path: 
     - packageId: com.unity.test-framework@1.1.29
       testable: 0
@@ -2733,7 +2958,7 @@ m_PackageAssets:
         email: 
         url: 
       category: Libraries
-      type: 
+      type: asset
       description: Custom version of the nunit package build to work with Unity.
         Used by the Unity Test Framework.
       status: 4
@@ -2747,6 +2972,7 @@ m_PackageAssets:
         - 1.0.5
         - 1.0.6
         - 2.0.2
+        - 2.0.3
         compatible:
         - 0.1.5-preview
         - 0.1.6-preview
@@ -2755,6 +2981,7 @@ m_PackageAssets:
         - 1.0.5
         - 1.0.6
         - 2.0.2
+        - 2.0.3
         verified: 1.0.6
       dependencies: []
       resolvedDependencies: []
@@ -2770,7 +2997,7 @@ m_PackageAssets:
         isDefault: 1
         capabilities: 7
       hasRegistry: 1
-      hideInEditor: 1
+      hideInEditor: 0
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
@@ -2796,7 +3023,7 @@ m_PackageAssets:
         email: 
         url: 
       category: 
-      type: 
+      type: asset
       description: 'This package defines common components used by multiple Game
         Service packages.
 
@@ -2818,6 +3045,13 @@ m_PackageAssets:
         - 1.3.1
         - 1.3.2
         - 1.4.0
+        - 1.4.1
+        - 1.4.2
+        - 1.4.3
+        - 1.5.2
+        - 1.6.0
+        - 1.7.0
+        - 1.7.1
         compatible:
         - 1.0.1
         - 1.1.0-pre.7
@@ -2831,6 +3065,13 @@ m_PackageAssets:
         - 1.3.1
         - 1.3.2
         - 1.4.0
+        - 1.4.1
+        - 1.4.2
+        - 1.4.3
+        - 1.5.2
+        - 1.6.0
+        - 1.7.0
+        - 1.7.1
         verified: 1.0.1
       dependencies:
       - name: com.unity.modules.unitywebrequest
@@ -2847,7 +3088,7 @@ m_PackageAssets:
         isDefault: 1
         capabilities: 7
       hasRegistry: 1
-      hideInEditor: 1
+      hideInEditor: 0
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
