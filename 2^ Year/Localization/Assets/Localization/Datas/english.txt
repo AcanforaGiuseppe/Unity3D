@@ -1,0 +1,3 @@
+ok=ok
+cancel=cancel
+#CTRL_PlayerForward=Move Forward
