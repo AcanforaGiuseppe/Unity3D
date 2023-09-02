@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# IDE0005: La direttiva using non è necessaria.
+dotnet_diagnostic.IDE0005.severity = none
