@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Custom_rimLight
+  m_Shader: {fileID: 4800000, guid: cceee1a573e6087468e333da9c009915, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Albedo:
+        m_Texture: {fileID: 2800000, guid: 092dc0ff0d0131c41896c55c2d801c26, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: fa1149866dc10cb4382274aad5a29f95, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Emission:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: fa1149866dc10cb4382274aad5a29f95, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: fa1149866dc10cb4382274aad5a29f95, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Occlusion:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Specular:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Addnoise: 0
+    - _BumpStrength: 1
+    - _Enableemission: 0
+    - _Enablerimlight: 1
+    - _FPOW: -103.8
+    - _Frequency: 2
+    - _Noisescale: 1
+    - _NormalStrength: 0
+    - _Pulsate: 0
+    - _R0: -175.3
+    - _RimValue: 1
+    - _RimWidth: 1.82
+    - _Rimlightbias: 0.03
+    - _Rimlightopacity: 1
+    - _Rimlightpower: 3.27
+    - _Rimlightscale: 0.94
+    - _Smoothness: 0
+    - _Stripes: 0.058
+    - _StripesCutOff: 0.468
+    - __dirty: 1
+    m_Colors:
+    - _Albedotintcolor: {r: 1, g: 1, b: 1, a: 0}
+    - _Color: {r: 0.13207549, g: 0.12148453, b: 0.12148453, a: 1}
+    - _Emissiontintcolor: {r: 0, g: 0, b: 0, a: 1}
+    - _Mainoffset: {r: 0, g: 0, b: 0, a: 0}
+    - _Maintiling: {r: 1, g: 1, b: 0, a: 0}
+    - _Noisespeed: {r: 0, g: 0, b: 0, a: 0}
+    - _OuterRimColor: {r: 0, g: 0.25355005, b: 1, a: 1}
+    - _RimColor: {r: 1, g: 0, b: 0.19916248, a: 1}
+    - _Rimlightcolor: {r: 0, g: 0.8344827, b: 1, a: 1}
+    - _TintColor: {r: 0, g: 0.5152769, b: 1, a: 0.09803922}
+    - _normalOffset: {r: 0.86, g: 2.28, b: 0, a: -59.15}
+    - _normalTiling: {r: 66.06, g: 0, b: 0, a: -9.09}
+  m_BuildTextureStacks: []

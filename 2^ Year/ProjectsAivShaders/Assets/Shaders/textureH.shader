@@ -1,0 +1,132 @@
+Shader "Custom/textureH"
+{
+    Properties{
+        //Non deve per forza chiamarsi _Color basta che sia coerente coi nostri parametri
+        _Color("MainColor", Color) = (1,1,1,1) //(<descrizione>,<tipo di variabile>) = (<valore di default da cui partire)
+        //<tipo di variabile> : se é un vector avro i valori di modifica in ispector X Y Z, se é un color avro il Picker del colore
+        
+        //[NoScaleOffset]
+        //[Normal]
+        //[MainTexture]
+        _MainTex("Main texture", 2D) = "white" {}
+        _MipMap("MipMapIndex", Range(0,5)) = 0
+    }
+
+    Subshader
+    {
+        //Tra subshader e pass (poi lo vedremo meglio) per compatibilita con la URP
+        //ci deve essere un altro blocco Tags
+        Tags{
+            "RenderPipeline"="UniversalRenderPipeline"
+            "Queue"="Transparent"
+        }
+        Pass
+        {
+            ZWrite Off 
+
+            Blend SrcAlpha OneMinusSrcAlpha
+            BlendOp Add
+
+            HLSLPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #pragma target 3.0 //(il 3.0 ci permette se vogliamo di samplare la texture nel fragment shader)
+
+
+            #include "HLSLSupport.cginc" //Serve per la compatibilita con il CG
+            //perche alcune cose che scriveremo come half4 derivano dal CG
+            //e questo include ci toglie un po di problemi di compatibilita
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+            //il secondo include é obbligatorio perche la nostra URP la stiamo installando con il Package Manager
+            //quindi non ci sono degli include automatici, cosa che nel CG ce scrivendo uno shader in CG per BIRP 
+            //gli include non servono (almeno per le cose semplici)
+
+            uniform half4 _Color; //ora posso usare la proprieta _Color presente nello scoopo ShaderLab
+            //sia in vertexshader che in fragment
+
+            uniform sampler2D _MainTex;
+            uniform float4 _MainTex_ST;
+            uniform float _MipMap;
+
+            //vertexInput - vIn
+            struct vertexInput
+            {
+                float4 vertex : POSITION; //ti do a disposizione un float4  che si chiama vertex
+                //tu riempimelo con la POSITION in object space
+                //vedremo poi perche float4 e non 3 malgrado usiamo XYZ
+                
+                float4 texcoord : TEXCOORD0; //Ricordo che POSITION, TEXCOORD0 etc..
+                //sono interpolatori, 0 perche posso averne di piu. Texcoord0 sto richiedendo le coordinate
+                //in texcoord della texture 0
+            };
+            //vertexOut -v2f (vertex to frag)
+            struct vertexOutput //per ogni vertice dato dalla struttura vertexInput io andro a scrivere la loro
+            //pos in Project Space
+            {
+                //qui andra data la posizione dell'oggetto in Project Space
+                //posso scrivere vertex ma non avrebbe senso perche la struttura vertexInput
+                //mi viene data per ogni vertice passato
+
+                //in vertexOutput non ce il concetto di vertice. ma ce il concetto di posizione
+                //perche il vertex di vertexInput viene interpolato all'interno della struttura di
+                //vertexOutput e quindi é piu coerente scrivere posizione (pos) in Project Space
+                //che poi verra elaborata dal Fragment e sara una pos in Screen Space
+                float4 pos : SV_POSITION; //SV_POSITION mi dice la pos in project space
+
+                float4 texcoord : TEXCOORD0;
+                //Vertex shader sampling
+                //float4 texColor : COLOR0;
+            };
+
+            vertexOutput vert(vertexInput v)
+            {
+                //FARA OPERAZIONI con v.vertex e riempira un vertexOutput dando un return
+                vertexOutput o;
+                o.pos = mul(UNITY_MATRIX_MVP, v.vertex); //moltiplicazione di una matrice per il punto, il punto che mi viene 
+                //dato é il v.vertex (obj space)
+                //mul(matrice,punto)
+                //la matrice che ci serve é la model view projection matrix (serve
+                //per fare tutti i passaggi per passare da obj space a project space)
+                
+                //Quindi o.pos sara in Projection Space
+
+
+                o.texcoord = v.texcoord;
+                o.texcoord.xy = v.texcoord.xy * _MainTex_ST.xy + _MainTex_ST.zw; //questo é il calcolo che mi va a modificare la U e la V della texcoord
+                                                                                 //cosi funziona il Tiling e Offset della texture dall'inspector
+                //o.texcoord.xy = TRANSFORM_TEX(v.texcoord, _MainTex).xy; //oppure usando questa macro piu semplice
+                
+                //Vertex shader sampling
+                //o.texColor = tex2Dlod(_MainTex, float4(o.texcoord.xyz, _MipMap));
+                return o;
+            }
+
+            half4 frag(vertexOutput i): COLOR //Color significa che mandero in un ouput una sola cosa alla
+            //fine di tutte le operazioni fatte in frag ovvero il colore
+            {
+                //fragment andando a leggere i.pos mi dara la posizione in Screen Space di tutti i pixel facenti
+                //parte di questa mesh
+                //i.pos - ScreenSpace
+
+                //il frag ha come input il vertexOutput cioe o
+                //return half4(1,0,0,1); //anziche fare un output solo facciamone uno costante
+                //usando la proprieta _Color solo che sta nello scoop del ShaderLab e noi
+                //dobbiamo passarla nel codice HLSL tramite una uniform'
+
+                //Auto mipmap index
+                half4 texColor = tex2D(_MainTex, i.texcoord);
+
+                //MipMapSampling
+                //half4 texColor = tex2Dlod(_MainTex, float4(i.texcoord.xyz, _MipMap));
+                return texColor * _Color;
+                //lo spostiamo e lo facciamo nel vertex shader
+
+                //Vertex shader sampling
+                //return i.texColor * _Color;
+            }
+
+            ENDHLSL
+        }
+    }
+}
+
